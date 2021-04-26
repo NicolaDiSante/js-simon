@@ -35,8 +35,22 @@ $(document).ready(function(){
         arrUserNumbers.push($('#input').val());
         $('#input').val("");
 
+        console.log(arrUserNumbers)
+
         if(arrUserNumbers.length === 5){
           
+          $("#console, h1").hide();
+          $('h1').text("Risultato in elaborazione").show();
+
+          setTimeout(function(){
+
+            if(arrUserNumbers.includes(arrRandomNumbers[i])){
+              console.log("Ci sono dei numeri in comune")
+            }
+
+            
+          }, 5000)
+
         }
       })
 
